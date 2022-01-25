@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import makeStyles from "@mui/styles/makeStyles";
 import PeopleManager from './containers/PeopleManager';
 import { Box, AppBar, Toolbar, Container, Button, Typography } from "@mui/material";
@@ -75,8 +75,9 @@ function Main() {
                         <Route
                             exact
                             path="/other"
-                            element={<Typography>There's nothing here</Typography>}
+                            element={<Typography variant="h4">There's nothing here yet...</Typography>}
                         />
+                        <Route path='*' element={<Typography variant="h4">Not Found</Typography>} />
                     </Routes >
                 </Box>
             </main>

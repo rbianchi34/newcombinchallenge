@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Card, CardContent, Grid } from '@mui/material';
+import React, { useState } from "react";
+import { Grid } from '@mui/material';
 import PeopleGrid from "./PeopleGrid";
 import PeopleForm from "./PeopleForm";
 import { useIdleTimer } from 'react-idle-timer'

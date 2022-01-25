@@ -1,25 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Alert, Grid } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
-import makeStyles from '@mui/styles/makeStyles';
 import axios from 'axios';
-
-
-const useStyles = makeStyles((theme) => ({
-    dialogActions: {
-        paddingTop: theme.spacing(2),
-        paddingBottom: theme.spacing(2),
-        paddingRight: theme.spacing(3),
-        paddingLeft: theme.spacing(3)
-    },
-}))
 
 function PeopleGrid({ newPerson, clearNewPerson, reload, setReload }) {
     const [people, setPeople] = useState([])
-
     const [error, setError] = useState(null)
-
-
 
     useEffect(() => {
         if (reload) {
